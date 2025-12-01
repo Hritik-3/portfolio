@@ -1,0 +1,726 @@
+<!-- Hritik's Portfolio -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hritik Singh | Full Stack Java Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Hritik Singh, Full Stack Java Developer skilled in Java, Spring Boot, Angular, and Oracle SQL." />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind via CDN (for utility classes + modern look) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #e0f2fe 0%, #f5f7ff 40%, #eef2ff 100%);
+      color: #111827;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-animate {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.8s ease-out forwards;
+      animation-delay: 0.05s;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 55px rgba(15, 23, 42, 0.18);
+    }
+
+    .badge-skill {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 0.75rem;
+        padding: 0.75rem 1rem;
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-white/80 border-b border-slate-200 backdrop-blur">
+    <div class="container-xl px-3">
+      <a class="navbar-brand fw-bold tracking-[0.18em] text-xs sm:text-sm text-slate-800 uppercase" href="#hero">
+        HRITIK · PORTFOLIO
+      </a>
+      <button
+        class="navbar-toggler border-0 shadow-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item">
+            <a class="nav-link text-slate-700 hover:text-slate-900 text-sm" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-slate-700 hover:text-slate-900 text-sm" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-slate-700 hover:text-slate-900 text-sm" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-slate-700 hover:text-slate-900 text-sm" href="#certifications">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-slate-700 hover:text-slate-900 text-sm" href="#education">Education</a>
+          </li>
+          <!-- NEW: Activities link -->
+          <li class="nav-item">
+            <a class="nav-link text-slate-700 hover:text-slate-900 text-sm" href="#activities">Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-slate-700 hover:text-slate-900 text-sm" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="pt-24 pb-16">
+    <div class="container-xl px-4">
+      <div class="row g-4 align-items-center">
+        <!-- LEFT: Intro -->
+        <div class="col-lg-7 hero-animate">
+          <div class="glass-card p-4 p-md-5 mb-3">
+            <div class="inline-flex items-center mb-3">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">
+                Full Stack Java Developer · Spring Boot · Angular
+              </span>
+            </div>
+            <h1 class="text-3xl md:text-4xl fw-bold mb-3 leading-snug">
+              I build
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600 fw-semibold">
+                secure, high-performance
+              </span>
+              enterprise applications.
+            </h1>
+            <p class="text-slate-600 text-sm md:text-base mb-3">
+              Software Developer at Bosch Global Software Technologies, working with Java, Spring Boot, Spring Security (JWT),
+              Angular, and Oracle SQL to ship role-based, production-grade systems with optimized APIs and automated workflows.
+            </p>
+            <p class="text-slate-500 text-xs md:text-sm mb-3">
+              📍 Noida, UP, India · Open to Backend / Full Stack roles · Experience in RBAC, microservices concepts, and
+              Agile/Scrum teams.
+            </p>
+
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+              <!-- TODO: Replace href with actual resume URL in your repo -->
+              <a
+                href="Hritik_Singh_Java_FullStack_Developer.pdf"
+                class="inline-flex items-center justify-center px-4 py-2 rounded-pill border-0 text-sm fw-semibold text-white shadow-lg bg-gradient-to-r from-blue-600 to-teal-500"
+                download
+              >
+                Download Resume
+              </a>
+              <a
+                href="#projects"
+                class="inline-flex items-center justify-center px-4 py-2 rounded-pill border text-sm fw-semibold text-slate-700 bg-white/80 hover:bg-slate-50"
+              >
+                View Projects
+              </a>
+            </div>
+
+            <p class="text-slate-500 text-xs md:text-sm">
+              <span class="fw-semibold text-slate-800">Core stack:</span>
+              Java · Spring Boot · Spring MVC · Spring Security (JWT/OAuth2) · REST APIs · Angular · TypeScript · Oracle SQL
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Highlights -->
+        <div class="col-lg-5 hero-animate">
+          <div class="d-flex flex-column gap-3">
+            <div class="glass-card p-4">
+              <p class="text-[0.7rem] tracking-[0.18em] uppercase text-slate-500 mb-2 fw-semibold">
+                Current role
+              </p>
+              <h3 class="text-sm md:text-base fw-semibold text-slate-900 mb-1">
+                Bosch Global Software Technologies · Software Developer
+              </h3>
+              <p class="text-xs md:text-sm text-slate-600 mb-3">
+                Delivering secure RBAC modules, API optimization, and CI-driven quality improvements.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge-skill">RBAC modules</span>
+                <span class="badge-skill">JWT-secured APIs</span>
+                <span class="badge-skill">CI & static analysis</span>
+                <span class="badge-skill">Agile/Scrum</span>
+              </div>
+            </div>
+
+            <div class="glass-card p-4">
+              <p class="text-[0.7rem] tracking-[0.18em] uppercase text-slate-500 mb-2 fw-semibold">
+                Impact metrics
+              </p>
+              <ul class="list-unstyled text-xs md:text-sm text-slate-600 mb-0">
+                <li class="mb-1">
+                  ⚡ Improved API latency by <span class="fw-semibold text-slate-900">~25%</span> via SQL tuning and optimized
+                  REST endpoints.
+                </li>
+                <li class="mb-1">
+                  ⚙️ Reduced manual workload by <span class="fw-semibold text-slate-900">~40%</span> with workflow automation in
+                  inventory/order modules.
+                </li>
+                <li class="mb-1">
+                  🧪 Lowered defect leakage by <span class="fw-semibold text-slate-900">~18%</span> using automation and static
+                  analysis pipelines.
+                </li>
+              </ul>
+            </div>
+
+            <div class="glass-card p-4">
+              <p class="text-[0.7rem] tracking-[0.18em] uppercase text-slate-500 mb-2 fw-semibold">
+                Previous experience
+              </p>
+              <p class="text-xs md:text-sm text-slate-600 mb-1">
+                <span class="fw-semibold text-slate-900">Engineer 1 · Vivo Mobile India Pvt. Ltd.</span>
+              </p>
+              <p class="text-xs md:text-sm text-slate-600 mb-2">
+                Built responsive Angular UIs, integrated REST APIs, and improved rendering performance and page load times.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge-skill">Angular</span>
+                <span class="badge-skill">REST integration</span>
+                <span class="badge-skill">Performance tuning</span>
+                <span class="badge-skill">GitHub & Jira</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-14">
+    <div class="container-xl px-4">
+      <div class="mb-4 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
+        <div>
+          <h2 class="text-2xl md:text-3xl fw-bold mb-1">Technical Skills</h2>
+          <p class="text-slate-600 text-sm">
+            Full stack skill set focused on backend first, with production-ready frontend experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Programming & Backend -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-2">Programming & Backend</h3>
+            <p class="text-xs text-slate-600 mb-3">
+              Java · Spring Boot · Spring MVC · Spring Security (JWT/OAuth2) · REST APIs · Microservices concepts · JDBC · Maven
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge-skill">Java</span>
+              <span class="badge-skill">Spring Boot</span>
+              <span class="badge-skill">Spring Security</span>
+              <span class="badge-skill">REST APIs</span>
+              <span class="badge-skill">Microservices concepts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-2">Frontend</h3>
+            <p class="text-xs text-slate-600 mb-3">
+              Angular · TypeScript · JavaScript · HTML5 · CSS3 · Responsive UI.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge-skill">Angular</span>
+              <span class="badge-skill">TypeScript</span>
+              <span class="badge-skill">JavaScript</span>
+              <span class="badge-skill">Responsive UI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-2">Database & SQL</h3>
+            <p class="text-xs text-slate-600 mb-3">
+              Oracle SQL · PL/SQL · Query Optimization · Database Design.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge-skill">Oracle SQL</span>
+              <span class="badge-skill">PL/SQL</span>
+              <span class="badge-skill">Query tuning</span>
+              <span class="badge-skill">Schema design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DevOps & Tools -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-2">DevOps & Tools</h3>
+            <p class="text-xs text-slate-600 mb-3">
+              Git · GitHub · Postman · IntelliJ IDEA · Eclipse · VS Code · Oracle SQL Developer · Jira.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge-skill">Git/GitHub</span>
+              <span class="badge-skill">Postman</span>
+              <span class="badge-skill">IntelliJ</span>
+              <span class="badge-skill">Jira</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Competencies -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-2">Core Competencies</h3>
+            <p class="text-xs text-slate-600 mb-3">
+              OOP · API Integration · RBAC · Agile/Scrum · Unit Testing with JUnit/Mockito.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge-skill">OOP</span>
+              <span class="badge-skill">RBAC</span>
+              <span class="badge-skill">Agile/Scrum</span>
+              <span class="badge-skill">JUnit</span>
+              <span class="badge-skill">Mockito</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-2">Additional</h3>
+            <p class="text-xs text-slate-600 mb-3">
+              Foundational knowledge of Docker, AWS (EC2/S3 basics), and AI/ML concepts.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge-skill">Docker basics</span>
+              <span class="badge-skill">AWS EC2 / S3 basics</span>
+              <span class="badge-skill">AI/ML fundamentals</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="py-14">
+    <div class="container-xl px-4">
+      <div class="mb-4">
+        <h2 class="text-2xl md:text-3xl fw-bold mb-1">Professional Experience</h2>
+        <p class="text-slate-600 text-sm">
+          End-to-end ownership from backend APIs to UI integration in enterprise environments.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <!-- Bosch -->
+          <div class="glass-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <div>
+                <h3 class="text-sm fw-semibold text-slate-900 mb-1">Software Developer</h3>
+                <p class="text-xs text-slate-600 mb-1">
+                  Bosch Global Software Technologies (BGSW) · Hyderabad
+                </p>
+              </div>
+              <span class="text-[0.7rem] text-slate-500">Jan 2025 – Present</span>
+            </div>
+            <ul class="text-xs text-slate-600 mb-0 ps-3">
+              <li class="mb-1">
+                Built secure role-based modules using Spring Boot, Angular, and Oracle SQL, strengthening RBAC workflows and
+                improving scalability.
+              </li>
+              <li class="mb-1">
+                Optimized API performance with tuned queries and JWT-secured endpoints, reducing latency by around 25%.
+              </li>
+              <li class="mb-1">
+                Integrated automated workflows that cut manual user support and operational effort by ~20–40%.
+              </li>
+              <li class="mb-1">
+                Improved quality via automation, static analysis, and CI pipelines, reducing defect leakage.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!-- Vivo -->
+          <div class="glass-card p-4 h-100">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <div>
+                <h3 class="text-sm fw-semibold text-slate-900 mb-1">Engineer 1</h3>
+                <p class="text-xs text-slate-600 mb-1">
+                  Vivo Mobile India Pvt. Ltd. · Greater Noida
+                </p>
+              </div>
+              <span class="text-[0.7rem] text-slate-500">Jul 2024 – Jan 2025</span>
+            </div>
+            <ul class="text-xs text-slate-600 mb-0 ps-3">
+              <li class="mb-1">
+                Delivered responsive Angular frontends integrated with REST APIs, improving user engagement and usability.
+              </li>
+              <li class="mb-1">
+                Tuned frontend rendering and network interactions to reduce page load times significantly.
+              </li>
+              <li class="mb-1">
+                Used GitHub and Jira to streamline issue tracking and release workflows for the team.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-14">
+    <div class="container-xl px-4">
+      <div class="mb-4 d-flex flex-column flex-md-row justify-content-between align-items-md-end">
+        <div>
+          <h2 class="text-2xl md:text-3xl fw-bold mb-1">Technical Projects</h2>
+          <p class="text-slate-600 text-sm">
+            Real-world projects focusing on workflows, performance, and secure systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- IMS -->
+        <div class="col-md-6">
+          <div class="glass-card p-4 h-100 project-card transition duration-150 ease-out">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <div>
+                <h3 class="text-sm fw-semibold text-slate-900 mb-1">
+                  Next Gen Order Craft – Inventory Management System
+                </h3>
+                <p class="text-[0.7rem] text-slate-500 mb-2">
+                  Java · Spring Boot · Angular · Oracle SQL
+                </p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 mb-2">
+              Role-based inventory and order management platform with automated workflows for procurement and production teams.
+            </p>
+            <ul class="text-xs text-slate-600 mb-2 ps-3">
+              <li class="mb-1">
+                Designed an automated workflow engine for orders and production, reducing manual workload by ~40%.
+              </li>
+              <li class="mb-1">
+                Built role-based dashboards (procurement, inventory) backed by secure REST APIs.
+              </li>
+              <li class="mb-1">
+                Implemented real-time stock synchronization to reduce stock-out scenarios.
+              </li>
+            </ul>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="badge-skill">Spring Boot</span>
+              <span class="badge-skill">Angular</span>
+              <span class="badge-skill">Oracle SQL</span>
+              <span class="badge-skill">RBAC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Biometric Device -->
+        <div class="col-md-6">
+          <div class="glass-card p-4 h-100 project-card transition duration-150 ease-out">
+            <div class="d-flex justify-content-between align-items-start mb-1">
+              <div>
+                <h3 class="text-sm fw-semibold text-slate-900 mb-1">
+                  Biometric-Based Transaction Device
+                </h3>
+                <p class="text-[0.7rem] text-slate-500 mb-2">
+                  HTML · CSS · Oracle SQL · Embedded C · Arduino Mega 2560
+                </p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 mb-2">
+              Fingerprint-based cashless payment system for campus transactions, designed to replace cash handling at shops.
+            </p>
+            <ul class="text-xs text-slate-600 mb-2 ps-3">
+              <li class="mb-1">
+                Integrated fingerprint authentication for secure, PIN-based transaction approvals.
+              </li>
+              <li class="mb-1">
+                Built an Oracle-backed dashboard to monitor transactions and ensure record accuracy.
+              </li>
+              <li class="mb-1">
+                Configured Arduino Mega for biometric verification supporting hundreds of transactions per day.
+              </li>
+            </ul>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="badge-skill">Embedded C</span>
+              <span class="badge-skill">Arduino</span>
+              <span class="badge-skill">Oracle SQL</span>
+              <span class="badge-skill">Biometric auth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section id="certifications" class="py-14">
+    <div class="container-xl px-4">
+      <div class="mb-4">
+        <h2 class="text-2xl md:text-3xl fw-bold mb-1">Certifications</h2>
+        <p class="text-slate-600 text-sm">
+          Validated skills in cloud, AI, and advanced computing.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-1">
+              Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
+            </h3>
+            <p class="text-xs text-slate-600 mb-1">
+              Oracle University · 2025
+            </p>
+            <p class="text-xs text-slate-600 mb-0">
+              Covered AI/ML fundamentals, data-driven solutions, and OCI basics for deploying intelligent applications.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-1">
+              Advanced Computing & Software Development Training
+            </h3>
+            <p class="text-xs text-slate-600 mb-1">
+              C-DAC, Noida · 2022
+            </p>
+            <p class="text-xs text-slate-600 mb-0">
+              Strengthened foundations in software development, problem solving, and real-world project delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section id="education" class="py-14">
+    <div class="container-xl px-4">
+      <div class="mb-4">
+        <h2 class="text-2xl md:text-3xl fw-bold mb-1">Education</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-8 col-lg-6">
+          <div class="glass-card p-4">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-1">
+              Bachelor of Technology in Electronics & Communication Engineering
+            </h3>
+            <p class="text-xs text-slate-600 mb-1">
+              G.L Bajaj Institute of Technology and Management
+            </p>
+            <p class="text-xs text-slate-500 mb-1">
+              Aug 2019 – Aug 2023 · CGPA: 7.8
+            </p>
+            <p class="text-xs text-slate-600 mb-0">
+              Built strong fundamentals in engineering, problem solving, and systems thinking that carry into software design and
+              architecture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTRA-CURRICULAR ACTIVITIES SECTION -->
+  <section id="activities" class="py-14">
+    <div class="container-xl px-4">
+      <div class="mb-4">
+        <h2 class="text-2xl md:text-3xl fw-bold mb-1">Extra-Curricular Activities</h2>
+        <p class="text-slate-600 text-sm">
+          Outside code, I stay active and build discipline through sports and driving.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Volleyball -->
+        <div class="col-md-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-1">Volleyball</h3>
+            <p class="text-xs text-slate-600 mb-2">
+              Regularly play volleyball in team settings, which sharpens communication, leadership, and quick decision-making under pressure.
+            </p>
+            <p class="text-[0.7rem] text-slate-500 mb-0">
+              Highlights: teamwork, coordination, handling pressure in fast-paced situations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Swimming -->
+        <div class="col-md-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-1">Swimming</h3>
+            <p class="text-xs text-slate-600 mb-2">
+              Swimming helps me maintain stamina and focus. It’s a solo sport that demands consistency and control, similar to debugging complex systems.
+            </p>
+            <p class="text-[0.7rem] text-slate-500 mb-0">
+              Highlights: discipline, endurance, consistency over long time frames.
+            </p>
+          </div>
+        </div>
+
+        <!-- Driving -->
+        <div class="col-md-4">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-sm fw-semibold text-slate-900 mb-1">Driving</h3>
+            <p class="text-xs text-slate-600 mb-2">
+              Enjoy driving and long rides, which require patience, alertness, and the ability to stay calm and responsible over long stretches.
+            </p>
+            <p class="text-[0.7rem] text-slate-500 mb-0">
+              Highlights: attention to detail, risk awareness, steady decision-making.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- CONTACT SECTION -->
+  <section id="contact" class="py-14">
+    <div class="container-xl px-4">
+      <div class="mb-4">
+        <h2 class="text-2xl md:text-3xl fw-bold mb-1">Get in Touch</h2>
+        <p class="text-slate-600 text-sm">
+          Best suited for backend or full stack roles using Java, Spring Boot, Angular, and Oracle SQL.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-7">
+          <div class="glass-card p-4">
+            <p class="text-xs text-slate-600 mb-2">
+              If you’re hiring for a Java/Spring Boot backend or full stack position and need someone who can own APIs, database
+              design, and frontend integration, feel free to reach out.
+            </p>
+            <ul class="list-unstyled text-xs text-slate-700 mb-0">
+              <li class="mb-1">
+                📞 Phone:
+                <a href="tel:+919870217238" class="text-blue-600">
+                  +91-9870217238
+                </a>
+              </li>
+              <li class="mb-1">
+                📧 Email:
+                <a href="mailto:hritiksingh1029@gmail.com" class="text-blue-600">
+                  hritiksingh1029@gmail.com
+                </a>
+              </li>
+              <li class="mb-1">
+                🔗 LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/hritik-singh-java-fullstack"
+                  target="_blank"
+                  class="text-blue-600"
+                >
+                  linkedin.com/in/hritik-singh-java-fullstack
+                </a>
+              </li>
+              <li class="mb-1">
+                📍 Location: Noida, UP, India
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <p class="text-[0.7rem] tracking-[0.18em] uppercase text-slate-500 mb-2 fw-semibold">
+                Quick summary
+              </p>
+              <p class="text-xs text-slate-600 mb-2">
+                Full Stack Java Developer with experience in Spring Boot, Angular, and Oracle SQL. Hands-on with JWT security,
+                performance tuning, and building role-based enterprise applications.
+              </p>
+            </div>
+            <p class="text-[0.7rem] text-slate-500 mb-0">
+              Currently at <span class="fw-semibold text-slate-800">Bosch Global Software Technologies</span> · Available for
+              discussions about backend / full stack roles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="py-4 border-t border-slate-200 bg-white/60">
+    <div class="container-xl px-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="text-[0.7rem] text-slate-500 mb-0">
+        © <span id="year"></span> Hritik Singh. All rights reserved.
+      </p>
+      <a href="#hero" class="text-[0.7rem] text-blue-600 mb-0">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Small JS for year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
